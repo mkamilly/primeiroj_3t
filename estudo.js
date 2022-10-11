@@ -41,3 +41,32 @@ function total(){
    let resultado = (val * (1+ (ju/100)));
    document.write("O resultado é " + resultado);
 }
+
+function soma(){
+   let v1 = document.getElementById("v1").value;
+   let v2 = document.getElementById("v2").value;
+   let r = (Number(v1) + Number(v2));
+   document.getElementById("resultado").innerHTML = r;
+}
+
+
+function subtração(){
+   let v1 = document.getElementById("v1").value;
+   let v2 = document.getElementById("v2").value;
+   let r = (Number(v1) - Number(v2));
+   document.getElementById("resultado").innerHTML = r;
+}
+
+function divisão(){
+   let v1 = document.getElementById("v1").value;
+   let v2 = document.getElementById("v2").value;
+   let r = (Number(v1) / Number(v2));
+   document.getElementById("resultado").innerHTML = r;
+}
+
+function multiplicação(){
+   let v1 = document.getElementById("v1").value;
+   let v2 = document.getElementById("v2").value;
+   let r = (Number(v1) * Number(v2));
+   document.getElementById("resultado").innerHTML = r;
+}

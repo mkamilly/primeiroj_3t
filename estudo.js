@@ -35,53 +35,39 @@ function quadrado(){
    }
 }
 
+function moeda(atual){
+   return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+}
+
 function total(){
    let val = document.getElementById("valor").value;
    let ju = document.getElementById("juros").value;
+   let t = document.getElementById("meses").value;
 
    if(!Number(val)){
       alert("O valor deve ser um número.");
       document.getElementById("valor").value = "";
-      document.getElementById("valor").focus = "";
-      return
+      document.getElementById("valor").focus();
+      return 
    }
-
    if(!Number(ju)){
-      alert("O valor deve ser um número.")
+      alert("O valor dos juros deve ser um número.");
       document.getElementById("juros").value = "";
-      document.getElementById("juros").focus = "";
-      return
+      document.getElementById("juros").focus();
+      return 
+   }
+   if(!Number(t)){
+      alert("A quantidade de meses deve ser um número.");
+      document.getElementById("meses").value = "";
+      document.getElementById("meses").focus();
+      return 
+   }
+   let r = val;
+   for(let m = 1; m <= t; m++){
+      r = (val * (1+ (ju/100)));
+      val = r;
+      document.write("Mês " + m + " valor: " + moeda(r) + "<br>");
    }
    
-   let resultado = (val * (1+ (ju/100)));
-   document.write("O resultado é " + resultado);
-}
-
-function soma(){
-   let v1 = document.getElementById("v1").value;
-   let v2 = document.getElementById("v2").value;
-   let r = (Number(v1) + Number(v2));
-   document.getElementById("resultado").innerHTML = r;
-}
-
-
-function subtração(){
-   let v1 = document.getElementById("v1").value;
-   let v2 = document.getElementById("v2").value;
-   let r = (Number(v1) - Number(v2));
-   document.getElementById("resultado").innerHTML = r;
-}
-
-function divisão(){
-   let v1 = document.getElementById("v1").value;
-   let v2 = document.getElementById("v2").value;
-   let r = (Number(v1) / Number(v2));
-   document.getElementById("resultado").innerHTML = r;
-}
-
-function multiplicação(){
-   let v1 = document.getElementById("v1").value;
-   let v2 = document.getElementById("v2").value;
-   let r = (Number(v1) * Number(v2));
-   document.getElementById("resultado").innerHTML = r;
+   document.write("O total é " + moeda(r));
 }

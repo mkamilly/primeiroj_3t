@@ -1,41 +1,32 @@
-.calculadora {
-    background-color: violet;
-    width: 200px;
-    padding: 20px;
-    border-radius:50% ;
-    box-shadow: 10px 10px purple;
-    text-align: center;
-}
-.calculadora input {
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
-    background-color: rgb(201, 140, 230);
-    color: white;
-}
-.calculadora input:focus {
-    background-color: white;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceiro Trimestre</title>
+    <link rel="stylesheet" href="geral.css">
+    <script src="estudo.js"></script>
+</head>
+
+<body>
+    <div class="calculadora">
+        <div class="spTotal">
+            <span id="total">Total: 0,00</span> <br> 
+        </div>
+        
+        Capital: <input id="valor" type="text"> <br>
+        Juros (mensais): <input id="juros" type="text"> <br>
+        Nr. Meses: <input id="meses" type="text"> <br>
+        <button id="btnCalc" onclick="total()"> Calcular </button>
+        <div class="spListaMes">
+            <span id="listaMes">Meses</span>
+        </div>
+    </div>
     
 
-}
-.spTotal {
-    background-color: purple;
-    border-radius: 5px;
-    padding: 5px;
-    color: rgb(255, 208, 0);
-    margin-bottom: 1px;
+    <br><br><br>
+</body>
 
-}
-#btnCalc {
-    background: rgb(171, 2, 250);
-    color:white;
-    margin: 10px;
-    padding: 5px;
-}
-#btnCalc:hover{
-    background: rgb(201, 140, 230);
-    color:rgb(0, 0, 0);
-    cursor: pointer;
-}
-
-
+</html>

@@ -2,7 +2,29 @@
     background-color: violet;
     width: 200px;
     padding: 20px;
+    border-radius:50% ;
+    box-shadow: 10px 10px purple;
+    text-align: center;
+}
+.calculadora input {
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    background-color: rgb(201, 140, 230);
+    color: white;
+}
+.calculadora input:focus {
+    background-color: white;
     
+
+}
+.spTotal {
+    background-color: purple;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(255, 208, 0);
+    margin-bottom: 1px;
+
 }
 #btnCalc {
     background: rgb(171, 2, 250);
@@ -14,12 +36,6 @@
     background: rgb(201, 140, 230);
     color:rgb(0, 0, 0);
     cursor: pointer;
-}
-#total {
-    padding: 5px;
-    margin: 5px;
-    background:rgb(171, 2, 250);
-    color:yellow;
 }
 
 
